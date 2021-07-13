@@ -1,0 +1,29 @@
+copyright = "Copyright © {year} tinect. All Rights Reserved."
+
+# Multilingual mode
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# Pagination
+paginate = 10
+# paginatePath = "page"
+
+# Disqus
+# disqusShortname = "yourdiscussshortname"
+
+# Google analytics
+# googleAnalytics = "UA-123-45"
+
+enableRobotsTXT = true
+
+enableEmoji = true
+
+# hasCJKLanguage = true # Turn on it if your content contains Chinese/Japanese/Korean Languages.
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+#  series = "series"
+  tag = "tags"

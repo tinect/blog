@@ -1,0 +1,12 @@
+languageCode: "en-us"
+baseUrl: "https://newblog.tinect.de/"
+title: "tinect's blog"
+theme: "hugo-theme-bootstrap"
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      title: Posts
+      url: /posts/
+      weight: 0

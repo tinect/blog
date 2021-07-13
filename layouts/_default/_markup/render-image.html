@@ -1,0 +1,9 @@
+{{ $image := .Page.Resources.GetMatch .Destination }}
+
+{{ if gt $image.Width 776 }}
+    {{ $image = $image.Resize "776x webp q80" }}
+{{ else }}
+    {{ $defaultResize := print $image.Width "x webp q80" }}
+    {{ $image = $image.Resize $defaultResize }}
+{{ end }}
+<img class="img-fluid"  src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}" {{ end }} loading="lazy"/>
