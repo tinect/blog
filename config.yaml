@@ -1,5 +1,5 @@
 languageCode: "en-us"
-baseUrl: "https://newblog.tinect.de/"
+baseUrl: "https://blog.tinect.de/"
 title: "tinect's blog"
 theme: "hugo-theme-bootstrap"
 
