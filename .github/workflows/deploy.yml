@@ -27,7 +27,7 @@ jobs:
         run: hugo --minify
 
       - name: Deploy to Edge Storage
-        if: github.event_name != 'pull_request')
+        if: github.event_name != 'pull_request'
         uses: own3d/bunny-action@main
         env:
           BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
