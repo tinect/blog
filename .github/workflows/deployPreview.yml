@@ -14,15 +14,6 @@ jobs:
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
-
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
@@ -34,6 +25,15 @@ jobs:
       - name: Update Base-Url
         run: |
           echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
 
       - name: Deploy to Edge Storage
         uses: own3d/bunny-action@main
