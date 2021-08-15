@@ -29,7 +29,7 @@ jobs:
 
       - name: Get deploy path
         id: deploypath
-        run: echo "::set-output name=deploypath::00_previews/${{ steps.date.outputs.date }}-${{ github.sha }}"
+        run: echo "::set-output name=deploypath::00_previews/${{ github.event.number }}"
 
       - name: Update Base-Url
         run: |
