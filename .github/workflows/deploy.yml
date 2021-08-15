@@ -11,6 +11,7 @@ on:
 jobs:
   deployPreview:
     runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v2
         with:
@@ -35,7 +36,8 @@ jobs:
         run: echo "::set-output name=deploypath::00_previews/${{ steps.date.outputs.date }}-${{ GITHUB_SHA }}"
 
       - name: Update Base-Url
-        run: echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
+        run: |
+          echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
 
       - name: Deploy to Edge Storage
         if: github.event_name != 'pull_request'
