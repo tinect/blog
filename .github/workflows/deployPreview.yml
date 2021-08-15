@@ -36,7 +36,6 @@ jobs:
           echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
 
       - name: Deploy to Edge Storage
-        if: github.event_name != 'pull_request'
         uses: own3d/bunny-action@main
         env:
           BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
