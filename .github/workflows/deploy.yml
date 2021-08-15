@@ -1,4 +1,4 @@
-name: github pages
+name: deploy
 
 on:
   push:
@@ -9,7 +9,48 @@ on:
       - main
 
 jobs:
+  deployPreview:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Get deploy path
+        id: deploypath
+        run: echo "::set-output name=deploypath::00_previews/${{ steps.date.outputs.date }}-${{ GITHUB_SHA }}"
+
+      - name: Update Base-Url
+        run: echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
+
+      - name: Deploy to Edge Storage
+        if: github.event_name != 'pull_request'
+        uses: own3d/bunny-action@main
+        env:
+          BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
+          BUNNY_STORAGE_HOSTNAME: ${{ secrets.BUNNY_STORAGE_HOSTNAME }}
+          BUNNY_STORAGE_USERNAME: ${{ secrets.BUNNY_STORAGE_USERNAME }}/${{ steps.deploypath.outputs.deploypath }}
+          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          BUNNY_PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+        with:
+          args: deploy --dir=public
+
   deploy:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -27,7 +68,6 @@ jobs:
         run: hugo --minify
 
       - name: Deploy to Edge Storage
-        if: github.event_name != 'pull_request'
         uses: own3d/bunny-action@main
         env:
           BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
