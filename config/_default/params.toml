@@ -5,7 +5,7 @@
 # description = "An extreme fast, responsive and feature-rich blog theme for Hugo"
 # images = ["site-feature-image.jpg"]
 
-logo = "https://avatars.githubusercontent.com/u/135993?s=60&v=4" # Logo image. Default to "images/logo.webp".
+logo = "images/profile.jpeg" # Logo image. Default to "images/logo.webp".
 brand = "tinect"
 # menusPosition = "left" # Menus position: right(default), left or center.
 
