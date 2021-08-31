@@ -4,5 +4,6 @@
   ],
   "git-submodules": {
     "enabled": true
-  }
+  },
+  "dependencyDashboard": false
 }
