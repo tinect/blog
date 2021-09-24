@@ -47,7 +47,7 @@ jobs:
           args: deploy --dir=public
 
       - name: add message to pull request
-        uses: actions/github-script@v4
+        uses: actions/github-script@v5
         with:
           script: |
             await github.issues.createComment({
