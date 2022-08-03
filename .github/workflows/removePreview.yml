@@ -1,0 +1,29 @@
+name: clearPreview
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  pull_request_target:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  clearPreview:
+    runs-on: ubuntu-20.04
+    if: |
+            (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
+            (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
+    steps:
+      - name: Deploy to Edge Storage to clear folder
+        uses: own3d/bunny-action@main
+        env:
+          BUNNY_API_ACCESS_KEY: ${{ secrets.BUNNY_API_ACCESS_KEY }}
+          BUNNY_STORAGE_HOSTNAME: ${{ secrets.BUNNY_STORAGE_HOSTNAME }}
+          BUNNY_STORAGE_USERNAME: ${{ secrets.BUNNY_STORAGE_USERNAME }}/${{ steps.deploypath.outputs.deploypath }}
+          BUNNY_STORAGE_PASSWORD: ${{ secrets.BUNNY_STORAGE_PASSWORD }}
+          BUNNY_PULL_ZONE_ID: ${{ secrets.BUNNY_PULL_ZONE_ID }}
+        with:
+          args: deploy --dir=public
