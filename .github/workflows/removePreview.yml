@@ -17,6 +17,7 @@ jobs:
             (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
             (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
     steps:
+      - run: mkdir public
       - name: Deploy to Edge Storage to clear folder
         uses: own3d/bunny-action@main
         env:
