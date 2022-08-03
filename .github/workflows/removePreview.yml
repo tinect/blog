@@ -18,6 +18,11 @@ jobs:
             (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
     steps:
       - run: mkdir public
+
+      - name: Get deploy path
+        id: deploypath
+        run: echo "::set-output name=deploypath::00_previews/${{ github.event.number }}"
+
       - name: Deploy to Edge Storage to clear folder
         uses: own3d/bunny-action@main
         env:
