@@ -6,4 +6,6 @@
     {{ $defaultResize := print $image.Width "x webp q80" }}
     {{ $image = $image.Resize $defaultResize }}
 {{ end }}
-<img class="img-fluid"  src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}" {{ end }} loading="lazy"/>
+<img class="img-fluid"
+     style="aspect-ratio:{{ $image.Width }}/{{ $image.Height }}"
+     src="{{ $image.RelPermalink | safeURL }}" {{ with .Text }} alt="{{ . }}" {{ end }} {{ with .Title }} title="{{ . }}" {{ end }} loading="lazy"/>
