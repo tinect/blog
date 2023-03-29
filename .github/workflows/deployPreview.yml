@@ -52,7 +52,7 @@ jobs:
         run: |
           hugo mod npm pack
           npm install
-          hugo --minify
+          hugo --minify --environment preview
 
       - name: Deploy to Edge Storage
         uses: own3d/bunny-action@main
