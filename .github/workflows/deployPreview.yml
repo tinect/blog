@@ -40,7 +40,7 @@ jobs:
 
       - name: Update Base-Url
         run: |
-          echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config.yaml
+          echo -e "\nbaseUrl: \"https://blog.tinect.de/${{ steps.deploypath.outputs.deploypath }}/\"" >> config/preview/config.yaml
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -51,7 +51,6 @@ jobs:
       - name: Build
         run: |
           hugo mod npm pack
-          npm update
           npm install
           hugo --minify
 
