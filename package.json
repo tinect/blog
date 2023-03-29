@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.7.3",
-    "@algolia/autocomplete-theme-classic": "^1.7.3",
+    "@algolia/autocomplete-theme-classic": "^1.8.3",
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.17.4",
     "@babel/preset-env": "^7.16.11",
