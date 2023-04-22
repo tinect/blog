@@ -30,7 +30,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "chore: Update theme"
-          body: "Update theme"
+          title: "Update theme"
+          body: ""
           delete-branch: true
           branch: chore/theme-update
-          branch-suffix: short-commit-hash
