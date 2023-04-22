@@ -33,4 +33,6 @@ jobs:
           title: "Update theme"
           body: ""
           delete-branch: true
+          draft: true
+          reviewers: tinect
           branch: chore/theme-update
