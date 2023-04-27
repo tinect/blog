@@ -23,6 +23,7 @@ jobs:
       - name: Build
         run: |
           hugo mod get github.com/razonyang/hugo-theme-bootstrap@master
+          hugo mod tidy
           hugo mod npm pack
           npm update
 
