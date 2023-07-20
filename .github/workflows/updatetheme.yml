@@ -26,9 +26,10 @@ jobs:
           hugo mod tidy
           hugo mod npm pack
           npm update
-          if [ $(git diff --numstat | wc -l) = 1 ]; then echo "No need!" && exit 0; fi
+          echo "CHANGEDFILESCOUNT=$(git diff --numstat | wc -l)" >> $GITHUB_ENV
 
       - name: Create Pull Request
+        if: env.CHANGEDFILESCOUNT > 1
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "chore: Update theme"
