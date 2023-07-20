@@ -26,6 +26,7 @@ jobs:
           hugo mod tidy
           hugo mod npm pack
           npm update
+          if [ $(git diff --numstat | wc -l) = 1 ]; then echo "No need!" && exit 0; fi
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
