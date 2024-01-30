@@ -7,6 +7,8 @@ tags: ["shopware","cdn","thumbnail","pagespeed"]
 
 > No one needs Thumbnails on disk!
 
+[Read this]({{< ref "/you-might-not-need-thumbnails-or-modern-image-format/index.md" >}})
+
 Just imagine you can get suitable thumbnails and webp images without waiting for generation.
 This is why there is a plugin named ThumbnailProcessor.
 
