@@ -1,5 +1,5 @@
 ---
-title: "You might not need modern file formats or need thumbnails"
+title: "You might not need modern file formats or thumbnails"
 author: tinect
 date: 2024-01-30
 tags: ["cdn","thumbnail","pagespeed"]
