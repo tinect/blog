@@ -56,6 +56,8 @@ You can choose the name freely. The name is part of the domain. The Origin URL i
 
 #### Shopware 6
 
+>! Attention ! This part is outdated! I will update it soon.
+
 Edit the `shopware.yml` file in the `config/packages` subfolder of the shop. If the folder or file does not yet exist, you must create it. Add the block `cdn` after `shopware:` in a new line and adjust the values to the data of BunnyCDN.
 
 ```yaml

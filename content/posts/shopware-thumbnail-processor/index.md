@@ -3,11 +3,17 @@ title: "Shopware 6 + ThumbnailProcessor"
 author: tinect
 date: 2021-08-17
 tags: ["shopware","cdn","thumbnail","pagespeed"]
+draft: true
 ---
 
-> No one needs Thumbnails on disk!
+> No one needs thumbnails on disk!
 
-[Read this]({{< ref "../you-might-not-need-thumbnails-or-modern-image-format/index.md" >}})
+If you have no idea, why it is a great idea to use dynamic thumbnail and images, instead of creating WebP images, please 
+[read this]({{< ref "../you-might-not-need-thumbnails-or-modern-image-format/index.md" >}})
+
+## Goal
+
+I will show you how to install ThumbnailProcessor.
 
 Just imagine you can get suitable thumbnails and webp images without waiting for generation.
 This is why there is a plugin named ThumbnailProcessor.
@@ -22,7 +28,7 @@ You might know services like cloudinary, cloudimage or selfhosted imgproxy. If n
 So, let us start to deliver images as webp.  
 We will install the Processor with Bunny.net which is an suitable content delivery network with the option to deliver images on-the-fly.
 
->! Please note: while we want to install just the ThumbnailProcessor, we won't take care of storage at bunnycdn. Please see dedicated post about the storage.
+>! Please note: while we want to install just the ThumbnailProcessor, we won't take care of storage at bunnycdn. See dedicated post about the storage.
 
 - Register at bunny.net
 - 

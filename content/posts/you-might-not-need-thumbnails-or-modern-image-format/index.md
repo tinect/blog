@@ -5,6 +5,8 @@ date: 2024-01-30
 tags: ["cdn","thumbnail","pagespeed"]
 ---
 
+## Goal
+
 I would like to show you, how you can make Google love your images without saving any new format.
 
 ## Imagine
@@ -99,7 +101,7 @@ Responsive example:
 That's it.
 
 ### What service you can use?
-There are some service I tried for one of my plugins for Shopware 6.
+There are some service I tried for one of my plugins for Shopware 6. You might know services like cloudinary, cloudimage, bunny.net or selfhosted imgproxy.
 So you can check the [discussion in GitHub](https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor/discussions/categories/patterns). There are some listed with personal opinions.
 
 You can find selfhosted ones there too. But keep in mind, you need to manage caching on your proxy of your own servers.
