@@ -106,7 +106,7 @@ So you can check the [discussion in GitHub](https://github.com/FriendsOfShopware
 
 You can find selfhosted ones there too. But keep in mind, you need to manage caching on your proxy of your own servers.
 
-### Plugin for Shopware 6
+## Plugin for Shopware 6
 
-See [GitHub](https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor) or [Shopware Store](https://store.shopware.com/en/frosh69611263569f/thumbnailprocessor-incl.-webp-support.html).  
+FroshPlatformThumbnailProcessor is your friend and ally! See [GitHub](https://github.com/FriendsOfShopware/FroshPlatformThumbnailProcessor) or [Shopware Store](https://store.shopware.com/en/frosh69611263569f/thumbnailprocessor-incl.-webp-support.html).  
 Dedicated blog post is incomming.
