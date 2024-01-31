@@ -49,14 +49,14 @@ So, what about just this?
 ```html
 <picture>
   <!-- avif, if supported -->
-  <source type="image/avif" srcset=" img/image_100px.avif 100w, img/image_200px.avif 200w, ..."
+  <source type="image/avif" srcset=" img/thumbnail/image_100px.avif 100w, img/thumbnail/image_200px.avif 200w, ..."
     sizes="(max-width: 768px), (max-width: 1376px), 500px">
   <!-- webp, if supported. paste the above and replace avif with webp or imagine here are more lines following -->
   <!-- ... -->
   <!-- ... -->
   <!-- failover -->
   <img
-    srcset="img/image_100px.jpg 100w, img/image_200px.jpg 200w, ..."
+    srcset="img/thumbnail/image_100px.jpg 100w, img/thumbnail/image_200px.jpg 200w, ..."
     sizes="(max-width: 768px), (max-width: 1376px), 500px" src="img/image.jpg"
     alt="Really nice content!">
 </picture>
@@ -70,7 +70,7 @@ Cons:
 So, what about just this?
 ```html
 <img
-    srcset="img/image_100px.jpg 100w, img/image_200px.jpg 200w, ..."
+    srcset="img/thumbnail/image_100px.jpg 100w, img/thumbnail/image_200px.jpg 200w, ..."
     sizes="(max-width: 768px), (max-width: 1376px), 500px" src="img/image.jpg"
     alt="Really nice content!">
 ```
@@ -98,7 +98,7 @@ Responsive example:
     alt="Really nice content!">
 ```
 
-That's it.
+That's it. And you might want to remove existing thumbnails, if they are not used in SEO or mails. Otherwise, just make sure, there are no more new ones created and the new URL is used everywhere.
 
 ### What service you can use?
 There are some service I tried for one of my plugins for Shopware 6. You might know services like cloudinary, cloudimage, bunny.net or selfhosted imgproxy.
