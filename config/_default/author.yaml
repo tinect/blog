@@ -1,7 +1,7 @@
 name: tinect, aka Sebastian König
 avatar: https://avatars.githubusercontent.com/u/135993?s=120&v=4 # Avatar image. Default to "images/profile.webp".
 bio: 'programmer, developer, troll, sarcastic, realist'
-company: Kellerkinder GmbH # HTML markup are supported, such as: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>.
+company: REFLECTS GmbH # HTML markup are supported, such as: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Company</a>.
 #location: Earth # HTML markup are supported, such as: <a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>.
 # about: https://razonyang.com # The external about page. The internal about page will be used if not set.
 params: {
