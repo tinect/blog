@@ -120,9 +120,8 @@ post:
   # readMoreFromContent: true
 
 archive:
-  paginate: 20 # Archive pagination. Default to 100.
-  # basePath = "/archiv" # The base path of archive pages.
-  # dateFormat: 01-02 # Archive date format. Default to Jan 2.
+# basePath = "/archiv" # The base path of archive pages.
+# dateFormat = "01-02" # Archive date format. Default to "Jan 2".
 
 analytics:
   # baidu:  # Baidu Analytics
@@ -182,7 +181,7 @@ utterances:
   # lazyLoading: false # Default to true.
 
 search:
-  paginate: 5 # Pagination. Default to 10.
+  indexPaginate: 5 # Pagination. Default to 10.
   # resultContentWordCount: 240 # The maximum word count of result content for displaying.
   # Fuse.js options. See https://fusejs.io/api/options.html.
   fuse:
@@ -281,7 +280,9 @@ author:
     email: contact@tinect.de
     github: tinect
     gitlab: tinect
+    linkedin: tinect
     twitter: tinect1
     #  patreon: ""
     paypal: "tinect"
     rss: "" # Remove RSS
+    stackoverflow: 13686440/tinect
