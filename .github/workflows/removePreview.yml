@@ -12,7 +12,7 @@ on:
 
 jobs:
   clearPreview:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: |
             (github.event_name == 'pull_request_target' && github.actor == 'dependabot[bot]') ||
             (github.event_name != 'pull_request_target' && github.actor != 'dependabot[bot]')
