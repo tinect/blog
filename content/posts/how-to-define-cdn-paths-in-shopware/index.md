@@ -1,6 +1,5 @@
 ---
 title: "How to setup CDN Urls in Shopware 6"
-author: "tinectaaa"
 date: 2021-07-14
 lastmod: 2021-07-14
 tags: ["shopware","cdn"]

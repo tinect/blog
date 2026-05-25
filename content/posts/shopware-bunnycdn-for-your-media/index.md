@@ -1,6 +1,5 @@
 ---
 title: "Shopware 6 + BunnyCDN for your media"
-author: tinect
 date: 2019-12-25
 lastmod: 2021-07-14
 aliases:
