@@ -24,6 +24,7 @@ jobs:
         run: |
           hugo mod npm pack
           npm install
+          echo 'module.exports = { plugins: [] }' > postcss.config.js
           hugo --minify
 
       - name: Deploy to Edge Storage
