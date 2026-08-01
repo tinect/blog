@@ -4,3 +4,10 @@ main:
     title: Posts
     url: /posts/
     weight: 0
+
+footer:
+  - identifier: mailserver-contact
+    name: Mailserver Contact
+    title: Contact regarding mailserver
+    url: https://root1.tinect.de/
+    weight: 0
